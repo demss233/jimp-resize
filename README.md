@@ -1,18 +1,32 @@
-# Jimp Resize
+# jimp-resize
 
-This tool can resize any image from the internet and manipulates a variety of extensions, 
-it uses jimp under the hood.
+A simple Node.js utility to resize images using [Jimp](https://github.com/jimp-dev/jimp).  
+Supports local image files and URLs. Can also be extended to store and manage image data in MongoDB.
 
-# How it works
-### Input Image
-![image](https://github.com/user-attachments/assets/95bb43a5-06d5-4490-8ca9-2c0b39223dc3)
+## Features
+- Resize images to custom dimensions.
+- Works with both local files and remote URLs.
+- Optional MongoDB integration for storing image metadata.
+- Simple, lightweight, and fast.
 
-### Output Image (saved.jpg)
-![image](https://github.com/user-attachments/assets/7d323f2c-0615-4cb6-a16b-fb16d34c0047)
+---
 
-The format is pretty simple, <code>resize [url] [width] [height] [grayscale (1 or 0)] [name of the image to be saved (with extension)] </code>
+## Installation
 
+Clone the repository and install dependencies:
 
-# Global Access
+```bash
+git clone https://github.com/your-username/jimp-resize.git
+cd jimp-resize
+npm install
+npm install -g .
+```
 
-To make it global, you can look for the use of .bin in /node_modules. Create an executable file and link it globally using <code>npm link</code>
+## Usage
+
+Resize an image from the internet or local storage.
+
+### Basic Example
+```bash
+node resize.js --uri "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SRRmhH4X5N2e4QalcoxVbzYsD44C-sQv-w&s" --width 200 --height 200 --grey 1 --out "output.png"
+
