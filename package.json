@@ -4,7 +4,7 @@
   "description": "",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,11 @@
     "resize": "./bin/resize.js"
   },
   "dependencies": {
-    "jimp": "^1.6.0"
+    "chalk": "^5.5.0",
+    "jimp": "^1.6.0",
+    "node-fetch": "^3.3.2",
+    "ora": "^5.4.1",
+    "sharp": "^0.34.3",
+    "yargs": "^18.0.0"
   }
 }
